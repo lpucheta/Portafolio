@@ -243,34 +243,40 @@ a{
 
 /* Experiencia Académica*/
 
-.academic__title {
-    text-align: center; /* Centra el título */
-    margin-bottom: 20px; /* Espacio debajo del título */
-  }
-
+.academic__title{
+    text-align: center;
+}
 
 .academic__courses {
-    display: flex;
-    justify-content: space-between; /* Espacio entre las cajas */
     padding: 20px 150px;
-  }
-  
-  .academic__courses__box {
-    flex: 1 1 30%; /* Cada caja ocupará inicialmente el 30% del contenedor */
-    margin: 10px; /* Espacio entre las cajas */
-    text-align: center; /* Centrar el contenido horizontalmente */
-    background-color: #FFFFFF;
-  }
-  
-  .academic__courses__list {
-    list-style-type: none; /* Quita los puntos de la lista */
-    padding: 0;
-  }
-  
-  .academic__courses__item__img img {
-    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
-  }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 3 columnas y se ajusta al tamaño disponible */
+    gap: 20px; /* Espacio entre las columnas */
+}
 
+.academic__courses__item {
+    background-color: #FFFFFF;
+    padding: 20px; /* Espacio alrededor de cada item */
+    box-sizing: border-box; /* Incluir padding en el tamaño total */
+}
+
+.academic__courses__item__img{
+    background-color: #ffffff; /* Fondo blanco para la imagen */
+    padding: 20px; /* Espacio alrededor de la imagen */
+    display: flex; /* Utilizamos flexbox para centrar la imagen */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    max-width: 550px; /* Ancho máximo del contenedor */
+    min-width: 250px;
+    box-sizing: border-box; /* Incluir el padding en el tamaño total */
+}
+
+.academic__courses__item img {
+    max-width: 100%; /* La imagen no será más ancha que su contenedor */
+    display: block; /* Para evitar espacios adicionales debajo de la imagen */
+    padding: 50px 50px;
+    
+}
 
 
 /* experiencia*/
@@ -431,7 +437,14 @@ a{
 
 }
 
+.warnings{
+    margin: auto;
+    color: red;
+    padding-top: 20px;
+    text-align: center;
+    width: 200px;
 
+}
 
 
 /*footeer*/
@@ -524,12 +537,10 @@ a{
     }
 /*Formación Académica*/
 
-.academic__courses__box {
-    flex: 1 1 45%; /* Cada caja ocupará el 45% del contenedor */
-    padding: 20px;
-    
-    
-  }
+.academic__courses {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 3 columnas, se ajusta al tamaño disponible */
+}
+  
 
 
 /*Experiencia Profesional*/
@@ -597,6 +608,10 @@ a{
 
 .formcontato__form {
     width: 100%; /* Ocupa todo el ancho */
+}
+
+.formcontato__input{
+
 }
 
 }
@@ -689,17 +704,16 @@ a{
 /*Formación Académica*/
 
 .academic__courses {
-    flex-direction: column; /* Cambia la dirección del flex a columna */
-    padding: 50px 50px;
-  }
-
-  .academic__courses__box {
-    flex: 1 1 100%; /* Cada caja ocupará el 100% del contenedor */
-    margin-bottom: 20px; /* Espacio entre las cajas */
-    padding: 20px 50px;
-  }
+    padding: 8px 30px;
+    grid-template-columns: 1fr; /* 1 columna en dispositivos móviles */
+}
 
 /*Experiencia Profesional*/
+
+.experience__section__title{
+    text-align: center;
+    padding-bottom: 10px;
+}
 
 .experience {
     padding: 50px 50px;
@@ -765,6 +779,7 @@ a{
 .formcontato__form {
     width: 100%; /* Ocupa todo el ancho */
 }
+
 
 
 /*Footer*/

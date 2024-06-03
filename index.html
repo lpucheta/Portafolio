@@ -191,7 +191,7 @@
 
     <!-- Sección de Experiencia Profesional/Proyectos-->
     <section class="experience" id="xp">
-        <h2 class="experience__section__title">Experiencia Profissional</h2>
+        <h2 class="experience__section__title">Experiencia Profesional</h2>
         
         <div class="experience__container">
             <div class="experience__box">
@@ -255,12 +255,17 @@
                     <h2 class="formcontato__title">Contacto</h2>
                     <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
                     <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
-                    <form class="formcontato__form" name="form">
-                        <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
-                        <input class="formcontato__input" type="email" name="email" placeholder="E-mail">
-                        <input class="formcontato__input" type="text" name="asunto" placeholder="Assunto">
-                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
-                        <button type="submit" class="formcontato__botao">Enviar mensaje</button>
+                    <form class="formcontato__form" name="form" id="form">
+
+                        <input class="formcontato__input" type="text" name="nombre" id="name" placeholder="Nombre" required>
+
+                        <input class="formcontato__input" type="email" name="email" id="email" placeholder="E-mail" required>
+
+                        <input class="formcontato__input" type="text" name="asunto" id="asunto" placeholder="Assunto" required>
+                        
+                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+                        <button type="submit" class="formcontato__botao" id="btn_enviar">Enviar mensaje</button>
+                        <p class="warnings" id="warnings"></p>
                     </form>
                 </div>
             </div>
@@ -270,11 +275,9 @@
         <section class="footer">
             <div class="footer__rodape">
                 <p>Desarrollado por Lucas Pucheta</p>
-                <p>2022</p>
+                <p>2024</p>
             </div>
         </section>
     </div>
- <!-- Script del documento JavaScript -->
-<script src="validacion.js"></script>
 </body>
 </html>
